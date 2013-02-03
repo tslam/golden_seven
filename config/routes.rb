@@ -1,4 +1,6 @@
 GoldenSeven::Application.routes.draw do
+  root :to => 'Pictures#index'
+
   get '/pictures/new' => 'Pictures#new'
   post '/pictures' => 'Pictures#create'
 
