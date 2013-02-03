@@ -7,4 +7,6 @@ GoldenSeven::Application.routes.draw do
 
   get '/pictures/:id/edit', :controller => 'Pictures', :action => 'edit'
   put '/pictures/:id', :controller => 'Pictures', :action => 'update'
+
+  delete '/pictures/:id', :controller => 'Pictures', :action => 'destroy'
 end
