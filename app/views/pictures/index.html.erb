@@ -8,6 +8,7 @@
       <p>
         <a href="http://localhost:3000/pictures/<%= picture.id %>">Show</a>
         <a href="http://localhost:3000/pictures/<%= picture.id %>/edit">Edit</a>
+        <%= link_to "Delete", "http://localhost:3000/pictures/#{picture.id}", :method => 'delete' %>
       </p>
     </li>
   <% end %>
