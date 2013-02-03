@@ -26,8 +26,8 @@ class PicturesController < ApplicationController
 
   def update
     picture = Picture.find_by_id(params[:id])
-    picture.source = params[:source]
-    picture.caption = params[:caption]
+    picture.source = params[:picture][:source]
+    picture.caption = params[:picture][:caption]
     picture.save
 
     redirect_to picture_url(picture.id)
