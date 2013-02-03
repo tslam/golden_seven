@@ -20,5 +20,6 @@ class PicturesController < ApplicationController
   end
 
   def edit
+    @picture = Picture.find_by_id(params[:id])
   end
 end
