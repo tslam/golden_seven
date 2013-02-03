@@ -1,10 +1,10 @@
 <h1>Add A New Picture</h1>
 
 <nav>
-  <%= link_to "Cancel", "http://localhost:3000/pictures" %>
+  <%= link_to "Cancel", pictures_url %>
 </nav>
 
-<%= form_tag '/pictures', :method => 'post' do %>
+<%= form_tag pictures_url, :method => 'post' do %>
   <%= text_field_tag :source %>
   <%= text_field_tag :caption %>
   <%= submit_tag %>

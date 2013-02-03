@@ -16,7 +16,7 @@ class PicturesController < ApplicationController
     picture.caption = params[:caption]
     picture.save
 
-    redirect_to 'http://localhost:3000/pictures'
+    redirect_to pictures_url
   end
 
   def edit
@@ -29,13 +29,13 @@ class PicturesController < ApplicationController
     picture.caption = params[:caption]
     picture.save
 
-    redirect_to "http://localhost:3000/pictures/#{picture.id}"
+    redirect_to picture_url(picture.id)
   end
 
   def destroy
     picture = Picture.find_by_id(params[:id])
     picture.destroy
 
-    redirect_to "http://localhost:3000/pictures"
+    redirect_to pictures_url
   end
 end

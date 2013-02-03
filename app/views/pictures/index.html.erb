@@ -1,7 +1,7 @@
 <h1>List of Pictures</h1>
 
 <nav>
-  <%= link_to "Add A New Picture", "http://localhost:3000/pictures/new" %>
+  <%= link_to "Add A New Picture", new_picture_url %>
 </nav>
 
 <ul>
@@ -10,9 +10,9 @@
       <%= image_tag picture.source, width: 240 %>
       <p><%= picture.caption %></p>
       <nav>
-        <%= link_to "Show", "http://localhost:3000/pictures/#{picture.id}" %>
-        <%= link_to "Edit", "http://localhost:3000/pictures/#{picture.id}/edit" %>
-        <%= link_to "Delete", "http://localhost:3000/pictures/#{picture.id}", :method => 'delete' %>
+        <%= link_to "Show", picture_url(picture.id) %>
+        <%= link_to "Edit", edit_picture_url(picture.id) %>
+        <%= link_to "Delete", picture_url(picture.id), :method => 'delete' %>
       </nav>
     </li>
   <% end %>
