@@ -4,7 +4,6 @@
   <% @pictures.each do |picture| %>
     <li>
       <%= image_tag picture.source, width: 240 %>
-      <img src="<%= picture.source %>" width="240">
       <p><%= picture.caption %></p>
       <p>
         <%= link_to "Show", "http://localhost:3000/pictures/#{picture.id}" %>
