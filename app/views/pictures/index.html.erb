@@ -1,15 +1,19 @@
 <h1>List of Pictures</h1>
 
+<nav>
+  <%= link_to "Add A New Picture", "http://localhost:3000/pictures/new" %>
+</nav>
+
 <ul>
   <% @pictures.each do |picture| %>
     <li>
       <%= image_tag picture.source, width: 240 %>
       <p><%= picture.caption %></p>
-      <p>
+      <nav>
         <%= link_to "Show", "http://localhost:3000/pictures/#{picture.id}" %>
         <%= link_to "Edit", "http://localhost:3000/pictures/#{picture.id}/edit" %>
         <%= link_to "Delete", "http://localhost:3000/pictures/#{picture.id}", :method => 'delete' %>
-      </p>
+      </nav>
     </li>
   <% end %>
 </ul>

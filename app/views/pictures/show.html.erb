@@ -1,4 +1,9 @@
-<h1>Picture Details</h1>
+<h1>Picture Details #<%= @picture.id %></h1>
+
+<nav>
+  <%= link_to "Edit", "http://localhost:3000/pictures/#{@picture.id}/edit" %>
+  <%= link_to "Back", "http://localhost:3000/pictures" %>
+</nav>
 
 <%= image_tag @picture.source, width: 240 %>
 <p><%= @picture.source %></p>
