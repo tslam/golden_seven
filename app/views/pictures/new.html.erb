@@ -4,8 +4,8 @@
   <%= link_to "Cancel", pictures_url %>
 </nav>
 
-<%= form_tag pictures_url, :method => 'post' do %>
-  <%= text_field_tag :source %>
-  <%= text_field_tag :caption %>
-  <%= submit_tag %>
+<%= form_for @picture do |f| %>
+  <%= f.text_field :source %>
+  <%= f.text_field :caption %>
+  <%= f.submit %>
 <% end %>
