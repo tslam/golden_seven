@@ -24,5 +24,11 @@ class PicturesController < ApplicationController
   end
 
   def update
+    picture = Picture.find_by_id(params[:id])
+    picture.source = params[:source]
+    picture.caption = params[:caption]
+    picture.save
+
+    redirect_to "http://localhost:3000/pictures/#{picture.id}"
   end
 end
