@@ -6,8 +6,8 @@
       <img src="<%= picture.source %>" width="240">
       <p><%= picture.caption %></p>
       <p>
-        <a href="http://localhost:3000/pictures/<%= picture.id %>">Show</a>
-        <a href="http://localhost:3000/pictures/<%= picture.id %>/edit">Edit</a>
+        <%= link_to "Show", "http://localhost:3000/pictures/#{picture.id}" %>
+        <%= link_to "Edit", "http://localhost:3000/pictures/#{picture.id}/edit" %>
         <%= link_to "Delete", "http://localhost:3000/pictures/#{picture.id}", :method => 'delete' %>
       </p>
     </li>
