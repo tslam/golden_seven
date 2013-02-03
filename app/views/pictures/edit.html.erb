@@ -1,1 +1,7 @@
 <h1>Edit Picture</h1>
+
+<%= form_tag "/pictures/#{@picture.id}", :method => 'put' do %>
+  <input type="text" name="source" value="<%= @picture.source %>">
+  <input type="text" name="caption" value="<%= @picture.caption %>">
+  <input type="submit">
+<% end %>
