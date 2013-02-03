@@ -13,8 +13,8 @@ class PicturesController < ApplicationController
 
   def create
     picture = Picture.new
-    picture.source = params[:source]
-    picture.caption = params[:caption]
+    picture.source = params[:picture][:source]
+    picture.caption = params[:picture][:caption]
     picture.save
 
     redirect_to pictures_url
