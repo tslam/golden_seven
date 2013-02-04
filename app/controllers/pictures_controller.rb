@@ -26,7 +26,7 @@ class PicturesController < ApplicationController
     picture = Picture.find_by_id(params[:id])
     picture.update_attributes(params[:picture])
 
-    redirect_to picture_url(picture.id)
+    redirect_to picture_url(picture)
   end
 
   def destroy
